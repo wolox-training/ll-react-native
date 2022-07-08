@@ -18,9 +18,6 @@ import {
   DebugInstructions,
   ReloadInstructions
 } from 'react-native/Libraries/NewAppScreen';
-import Reactotron from 'reactotron-react-native';
-
-Reactotron.log('Testing reactotron');
 
 const App = () => {
   return (

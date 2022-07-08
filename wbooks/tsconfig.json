@@ -56,19 +56,17 @@
     // "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
     "paths": {
-      "@app/*": ["src/app/*"],
-      "@constants/*": ["src/constants/*"],
-      "@app" : ["./src/app"],
-      "'@assets'" : ["./src/app/assets"],
-      "'@components'" : ["./src/app/components"],
-      "'@hooks'" : ["./src/app/hooks"],
-      "'@screens'" : ["./src/app/screens"],
-      "'@config'" : ["./src/config"],
-      "'@constants'" : ["./src/constants"],
-      "'@interfaces'" : ["./src/interfaces"],
-      "'@redux'" : ["./src/redux"],
-      "'@services'" : ["./src/services"],
-      "'@utils'" : ["./src/utils"]
+      "@app/*":["./src/app/*"],
+      "@constants/*":["./src/constants/*"],
+      "@assets/*":["./src/app/assets/*"],
+      "@components/*":["./src/app/components/*"],
+      "@hooks/*":["./src/app/hooks/*"],
+      "@screens/*":["./src/app/screens/*"],
+      "@config/*":["./src/config/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
+      "@redux/*":["./src/redux/*"],
+      "@services/*":["./src/services/*"],
+      "@utils/*":["./src/utils/*"]
     },
   },
   "include": ["index.d.ts", "src/**/*", "src/App.test.tsx"],
