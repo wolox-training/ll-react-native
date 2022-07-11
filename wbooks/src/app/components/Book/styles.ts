@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     left: '115%',
     lineHeight: 20,
     textAlign: 'center',
-    color: authorColor,
+    color: titleColor,
     fontSize: 13
   },
   author: {
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     top: 20,
     lineHeight: 18,
     textAlign: 'center',
-    color: titleColor,
+    color: authorColor,
     fontSize: 12
   },
 
