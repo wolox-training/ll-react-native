@@ -1,3 +1,5 @@
+import cover from '@assets/Cover.png';
+
 export const BOOKS_MOCK = [
   {
     id: 0,
@@ -6,7 +8,7 @@ export const BOOKS_MOCK = [
     genre: 'Short story',
     publisher: 'Butterworth-Heinemann',
     year: '1968',
-    imageUrl: null
+    imageUrl: cover
   },
   {
     id: 1,
