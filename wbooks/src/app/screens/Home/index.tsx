@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import Book from '@app/components/Book';
 import { BOOKS_MOCK } from '@constants/mockBooks';
 

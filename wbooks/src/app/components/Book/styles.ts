@@ -3,20 +3,21 @@ import { titleColor, authorColor, white } from '@constants/colors';
 
 const styles = StyleSheet.create({
   title: {
-    left: 86,
+    left: '115%',
+    lineHeight: 20,
+    textAlign: 'center',
+    color: authorColor,
+    fontSize: 13
+  },
+  author: {
+    right: '350%',
     top: 20,
     lineHeight: 18,
     textAlign: 'center',
     color: titleColor,
     fontSize: 12
   },
-  author: {
-    right: 220,
-    lineHeight: 20,
-    textAlign: 'center',
-    color: authorColor,
-    fontSize: 18
-  },
+
   bookContainer: {
     display: 'flex',
     backgroundColor: white,
