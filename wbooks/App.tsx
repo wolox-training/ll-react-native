@@ -1,7 +1,7 @@
 import React from 'react';
 
-import App from './src/app';
+import Home from './src/app/screens/Home';
 
 export default function index() {
-  return <App />;
+  return <Home />;
 }
