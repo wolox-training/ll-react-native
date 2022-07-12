@@ -1,37 +1,35 @@
 import { StyleSheet } from 'react-native';
-import { titleColor, authorColor, white } from '@constants/colors';
+import { black, grey, white } from '@constants/colors';
 
 const styles = StyleSheet.create({
   title: {
-    left: '115%',
     lineHeight: 20,
     textAlign: 'center',
-    color: titleColor,
+    color: black,
     fontSize: 13
+    /* fontFamily: 'Inter',
+    fontStyle: 'normal',
+    fontWeight: '700' */
   },
   author: {
-    right: '350%',
-    top: 20,
     lineHeight: 18,
     textAlign: 'center',
-    color: authorColor,
+    color: grey,
     fontSize: 12
   },
 
   bookContainer: {
-    display: 'flex',
     backgroundColor: white,
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    marginTop: 45,
-    marginLeft: 18
+    padding: '3%'
   },
   textContainer: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
+    marginLeft: '3%',
     justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    marginLeft: -70
+    alignItems: 'flex-start'
   }
 });
 

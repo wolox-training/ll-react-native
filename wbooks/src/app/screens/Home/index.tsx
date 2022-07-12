@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
-import Book from '@app/components/Book';
+import Book from '@components/Book';
 import { BOOKS_MOCK } from '@constants/mockBooks';
 
 function Home() {

@@ -1,4 +1,3 @@
-export const titleColor = '#474747';
-export const authorColor = '#818181';
-export const black = 'black';
+export const black = '#474747';
+export const grey = '#818181';
 export const white = 'white';
