@@ -1,3 +1,5 @@
-export const black = '#474747';
-export const grey = '#818181';
-export const white = 'white';
+export const tundora = '#474747';
+export const gray = '#818181';
+export const white = '#FFFFFF';
+export const pictonBlue = '#38AAEB';
+export const aliceBlue = '#EFF9FF';

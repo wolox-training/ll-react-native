@@ -1,13 +1,15 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
 import Book from '@components/Book';
 import { BOOKS_MOCK } from '@constants/mockBooks';
+import { View } from 'react-native';
+
+import styles from './styles';
 
 function Home() {
   return (
-    <SafeAreaView>
+    <View style={styles.home}>
       <Book {...BOOKS_MOCK[0]} />
-    </SafeAreaView>
+    </View>
   );
 }
 export default Home;

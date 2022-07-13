@@ -1,35 +1,51 @@
 import { StyleSheet } from 'react-native';
-import { black, grey, white } from '@constants/colors';
+import { tundora, gray, white } from '@constants/colors';
 
 const styles = StyleSheet.create({
+  book: {
+    marginHorizontal: 24,
+    alignItems: 'flex-start',
+    flexDirection: 'row',
+    backgroundColor: white,
+    paddingVertical: 15,
+    marginVertical: 5,
+    elevation: 2,
+    shadowOffset: {
+      height: 0.5,
+      width: 4
+    },
+    shadowOpacity: 1,
+    shadowColor: gray,
+    borderRadius: 7
+  },
   title: {
-    lineHeight: 20,
-    textAlign: 'center',
-    color: black,
-    fontSize: 13
-    /* fontFamily: 'Inter',
-    fontStyle: 'normal',
-    fontWeight: '700' */
+    color: tundora,
+    fontSize: 16,
+    lineHeight: 19,
+    fontWeight: '700',
+    marginBottom: 3
   },
   author: {
+    color: gray,
+    fontSize: 15,
     lineHeight: 18,
-    textAlign: 'center',
-    color: grey,
-    fontSize: 12
+    fontWeight: '400'
   },
 
-  bookContainer: {
-    backgroundColor: white,
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    padding: '3%'
-  },
   textContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginLeft: '3%',
+    flex: 1,
     justifyContent: 'flex-start',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    marginTop: 5,
+    marginRight: 25
+  },
+
+  bookImage: {
+    height: 70,
+    width: 48,
+    marginRight: 13,
+    marginLeft: 25,
+    alignSelf: 'center'
   }
 });
 
