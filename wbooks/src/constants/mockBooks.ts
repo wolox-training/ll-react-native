@@ -1,3 +1,6 @@
+import book1 from '@assets/book1/Cover.png';
+import book2 from '@assets/book2/Cover1.png';
+
 export const BOOKS_MOCK = [
   {
     id: 0,
@@ -6,7 +9,7 @@ export const BOOKS_MOCK = [
     genre: 'Short story',
     publisher: 'Butterworth-Heinemann',
     year: '1968',
-    imageUrl: null
+    imageUrl: book1
   },
   {
     id: 1,
@@ -15,7 +18,7 @@ export const BOOKS_MOCK = [
     genre: 'other',
     publisher: 'Pocket Books',
     year: '1989',
-    imageUrl: null
+    imageUrl: book2
   },
   {
     id: 2,
