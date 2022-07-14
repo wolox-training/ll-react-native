@@ -27,7 +27,7 @@ export const BOOKS_MOCK = [
     genre: 'suspense',
     publisher: 'Little, Brown',
     year: '1985',
-    imageUrl: 'https://wolox-training.s3.amazonaws.com/uploads/6942334-M.jpg'
+    imageUrl: null
   },
   {
     id: 3,
