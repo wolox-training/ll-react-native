@@ -1,5 +1,8 @@
 import book1 from '@assets/book1/Cover.png';
 import book2 from '@assets/book2/Cover1.png';
+import book3 from '@assets/book3/Cover.png';
+import book4 from '@assets/book4/Cover.png';
+import book5 from '@assets/book5/Cover.png';
 
 export const BOOKS_MOCK = [
   {
@@ -27,7 +30,7 @@ export const BOOKS_MOCK = [
     genre: 'suspense',
     publisher: 'Little, Brown',
     year: '1985',
-    imageUrl: 'https://wolox-training.s3.amazonaws.com/uploads/6942334-M.jpg'
+    imageUrl: book3
   },
   {
     id: 3,
@@ -36,7 +39,7 @@ export const BOOKS_MOCK = [
     genre: 'suspense',
     publisher: 'Pocket Books',
     year: '1989',
-    imageUrl: 'https://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg'
+    imageUrl: book4
   },
   {
     id: 4,
@@ -45,7 +48,7 @@ export const BOOKS_MOCK = [
     genre: 'suspense',
     publisher: 'Pocket Books',
     year: '1989',
-    imageUrl: 'https://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg'
+    imageUrl: book5
   },
   {
     id: 5,
@@ -54,7 +57,7 @@ export const BOOKS_MOCK = [
     genre: 'suspense',
     publisher: 'Riverhead Books',
     year: '2015',
-    imageUrl: 'https://wolox-training.s3.amazonaws.com/uploads/content.jpeg'
+    imageUrl: null
   },
   {
     id: 6,
@@ -63,7 +66,7 @@ export const BOOKS_MOCK = [
     genre: 'suspense',
     publisher: 'Scribner',
     year: '2014',
-    imageUrl: 'https://wolox-training.s3.amazonaws.com/uploads/content.jpeg'
+    imageUrl: null
   },
   {
     id: 7,
@@ -72,8 +75,7 @@ export const BOOKS_MOCK = [
     genre: 'thriller',
     publisher: 'Ballantine Books',
     year: '2003',
-    imageUrl:
-      'https://wolox-training.s3.amazonaws.com/uploads/el-psicoanalista-analyst-john-katzenbach-paperback-cover-art.jpg'
+    imageUrl: null
   },
   {
     id: 8,
@@ -82,6 +84,6 @@ export const BOOKS_MOCK = [
     genre: 'fiction',
     publisher: 'Crown Publishing Group',
     year: '2011',
-    imageUrl: 'https://wolox-training.s3.amazonaws.com/uploads/41DNuJfahyL._SX322_BO1_204_203_200_.jpg'
+    imageUrl: null
   }
 ];
