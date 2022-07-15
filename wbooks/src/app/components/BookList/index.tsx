@@ -4,14 +4,16 @@ import Book, { BookProps } from '@components/Book';
 import { BOOKS_MOCK } from '@constants/mockBooks';
 
 const BookList = () => {
-  const keyExtractor = (item: BookProps) => `${item.id}`;
-  const renderItem = ({ item }: { index: number; item: BookProps }) => {
-    return <Book title={item.title} author={item.author} imageUrl={item.imageUrl} id={item.id} />;
+  const keyExtractor = (item: BookProps, index: number) => {
+    const key = item.id + index;
+    return key.toString();
   };
-
+  const renderItem = ({ item }: { item: BookProps; index: number }) => {
+    return <Book id={item.id} title={item.title} author={item.author} imageUrl={item.imageUrl} />;
+  };
   return (
     <SafeAreaView>
-      <FlatList data={BOOKS_MOCK} keyExtractor={keyExtractor} renderItem={renderItem} />
+      <FlatList data={BOOKS_MOCK} renderItem={renderItem} keyExtractor={keyExtractor} />
     </SafeAreaView>
   );
 };
