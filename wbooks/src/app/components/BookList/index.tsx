@@ -15,7 +15,9 @@ const BookList = () => {
       <Pressable
         onPress={() =>
           navigation.navigate('Details', {
-            undefined
+            imageUrl: item.imageUrl,
+            title: item.title,
+            author: item.author
           })
         }>
         <Book id={item.id} title={item.title} author={item.author} imageUrl={item.imageUrl} />
