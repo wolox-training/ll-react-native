@@ -10,7 +10,7 @@ function Home() {
   return (
     <View style={styles.home}>
       <BookList />
-      <DetailBook />
+      {/*  <DetailBook /> */}
     </View>
   );
 }
