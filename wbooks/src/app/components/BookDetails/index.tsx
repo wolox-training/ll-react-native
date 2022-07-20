@@ -11,7 +11,7 @@ export interface BookProps {
   year: string;
 }
 
-function DetailsBook({ imageUrl, title, author, year }: BookProps) {
+function BookDetails({ imageUrl, title, author, year }: BookProps) {
   return (
     <View style={styles.book}>
       <Image style={styles.bookImage} source={imageUrl ? imageUrl : defaultImg} />
@@ -24,4 +24,4 @@ function DetailsBook({ imageUrl, title, author, year }: BookProps) {
   );
 }
 
-export default DetailsBook;
+export default BookDetails;

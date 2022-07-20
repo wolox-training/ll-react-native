@@ -1,14 +1,14 @@
 import React from 'react';
 import { View } from 'react-native';
-import DetailsBook from '@app/components/DetailsBook';
+import BookDetails from '@app/components/BookDetails';
 
 import styles from './styles';
 
-function DetailBook() {
+function BookDetail() {
   return (
     <View style={styles.home}>
-      <DetailsBook />
+      <BookDetails />
     </View>
   );
 }
-export default DetailBook;
+export default BookDetails;

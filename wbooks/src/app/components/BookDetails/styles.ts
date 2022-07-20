@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { gray, white, tundora } from '@constants/colors';
+import { gray, white } from '@constants/colors';
 
 const styles = StyleSheet.create({
   book: {
@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
     backgroundColor: white
   },
   title: {
-    color: 'red',
     fontSize: 16,
     lineHeight: 19,
     fontWeight: '700',
