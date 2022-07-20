@@ -17,11 +17,13 @@ function BookDetail() {
   const { title, author, imageUrl, year } = route.params;
   return (
     <View style={styles.book}>
-      <Image style={styles.bookImage} source={imageUrl ? imageUrl : defaultImg} />
-      <View style={styles.textContainer}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.author}>{author}</Text>
-        <Text style={styles.year}>{year}</Text>
+      <View style={styles.infoContainer}>
+        <Image style={styles.bookImage} source={imageUrl ? imageUrl : defaultImg} />
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.author}>{author}</Text>
+          <Text style={styles.year}>{year}</Text>
+        </View>
       </View>
       <View style={styles.buttonContainer}>
         <View style={styles.button1} />

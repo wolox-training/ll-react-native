@@ -4,7 +4,7 @@ import { gray, white } from '@constants/colors';
 const styles = StyleSheet.create({
   book: {
     alignItems: 'flex-start',
-    flexDirection: 'row',
+    flexDirection: 'column',
     height: 265,
     marginTop: 94,
     marginHorizontal: 24,
@@ -16,6 +16,10 @@ const styles = StyleSheet.create({
     width: 66,
     marginTop: 15,
     marginLeft: 25
+  },
+
+  infoContainer: {
+    flexDirection: 'row'
   },
 
   textContainer: {
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     flex: 1,
-    flexWrap: 'wrap',
+    flexDirection: 'column',
     width: 277,
     height: 46,
     backgroundColor: 'red',
