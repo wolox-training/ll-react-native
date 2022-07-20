@@ -1,17 +1,20 @@
 import React from 'react';
 import { View, Image, Text } from 'react-native';
 import defaultImg from '@assets/defaultBook.png';
+import { useRoute } from '@react-navigation/native';
 
 import styles from './styles';
 
-export interface BookProps {
-  imageUrl?: any;
+export interface RouteParams {
   title: string;
   author: string;
+  imageUrl?: any;
   year: string;
 }
 
-function DetailsBook({ imageUrl, title, author, year }: BookProps) {
+function BookDetail() {
+  const route = useRoute();
+  const { title, author, imageUrl, year } = route.params;
   return (
     <View style={styles.book}>
       <Image style={styles.bookImage} source={imageUrl ? imageUrl : defaultImg} />
@@ -20,8 +23,11 @@ function DetailsBook({ imageUrl, title, author, year }: BookProps) {
         <Text style={styles.author}>{author}</Text>
         <Text style={styles.year}>{year}</Text>
       </View>
+      <View style={styles.buttonContainer}>
+        <View style={styles.button1} />
+      </View>
     </View>
   );
 }
 
-export default DetailsBook;
+export default BookDetail;

@@ -17,7 +17,8 @@ const BookList = () => {
           navigation.navigate('Details', {
             imageUrl: item.imageUrl,
             title: item.title,
-            author: item.author
+            author: item.author,
+            year: item.year
           })
         }>
         <Book id={item.id} title={item.title} author={item.author} imageUrl={item.imageUrl} />

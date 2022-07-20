@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { gray, white, tundora } from '@constants/colors';
+import { gray, white } from '@constants/colors';
 
 const styles = StyleSheet.create({
   book: {
@@ -29,14 +29,32 @@ const styles = StyleSheet.create({
     backgroundColor: white
   },
   title: {
-    color: 'red',
-    fontSize: 16,
-    lineHeight: 19,
     fontWeight: '700',
-    marginBottom: 3
+    fontSize: 20,
+    lineHeight: 24,
+    marginBottom: 2
   },
-  author: {},
-  year: {}
+  author: {
+    fontWeight: '400',
+    fontSize: 14,
+    lineHeight: 17,
+    textAlign: 'center'
+  },
+  year: {
+    fontWeight: '400',
+    fontSize: 14,
+    lineHeight: 17,
+    textAlign: 'center'
+  },
+  buttonContainer: {
+    flex: 1,
+    flexWrap: 'wrap',
+    width: 277,
+    height: 46,
+    backgroundColor: 'red',
+    alignItems: 'flex-end'
+  },
+  button1: {}
 });
 
 export default styles;
