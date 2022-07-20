@@ -3,9 +3,8 @@ import { gray, white } from '@constants/colors';
 
 const styles = StyleSheet.create({
   book: {
-    alignItems: 'flex-start',
+    alignItems: 'center',
     flexDirection: 'column',
-    height: 265,
     marginTop: 94,
     marginHorizontal: 24,
     marginBottom: 308,
@@ -50,15 +49,20 @@ const styles = StyleSheet.create({
     lineHeight: 17,
     textAlign: 'center'
   },
-  buttonContainer: {
-    flex: 1,
-    flexDirection: 'column',
+  button1: {
     width: 277,
     height: 46,
-    backgroundColor: 'red',
-    alignItems: 'flex-end'
+    marginTop: 26,
+    marginHorizontal: 25,
+    backgroundColor: 'red'
   },
-  button1: {}
+  button2: {
+    width: 277,
+    height: 46,
+    marginTop: 10,
+    marginHorizontal: 25,
+    backgroundColor: 'green'
+  }
 });
 
 export default styles;

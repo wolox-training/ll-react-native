@@ -14,7 +14,7 @@ export interface RouteParams {
 
 function BookDetail() {
   const route = useRoute();
-  const { title, author, imageUrl, year } = route.params;
+  const { title, author, imageUrl, year }: RouteParams = route.params;
   return (
     <View style={styles.book}>
       <View style={styles.infoContainer}>
@@ -25,9 +25,8 @@ function BookDetail() {
           <Text style={styles.year}>{year}</Text>
         </View>
       </View>
-      <View style={styles.buttonContainer}>
-        <View style={styles.button1} />
-      </View>
+      <View style={styles.button1} />
+      <View style={styles.button2} />
     </View>
   );
 }
