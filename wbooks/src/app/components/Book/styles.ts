@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 import { tundora, gray, white } from '@constants/colors';
 
 const styles = StyleSheet.create({
-  book: {
+  pressable: {
     marginHorizontal: 24,
     alignItems: 'flex-start',
     flexDirection: 'row',
