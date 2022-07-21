@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Image, Text } from 'react-native';
 import defaultImg from '@assets/defaultBook.png';
 import { useRoute } from '@react-navigation/native';
+import LinearGradient from 'react-native-linear-gradient';
 
 import styles from './styles';
 
@@ -25,8 +26,14 @@ function BookDetail() {
           <Text style={styles.year}>{year}</Text>
         </View>
       </View>
-      <View style={styles.button1} />
-      <View style={styles.button2} />
+      <View style={styles.button1}>
+        <Text style={styles.buttonText1}>ADD TO WISHLIST</Text>
+      </View>
+      <LinearGradient colors={['#1EACB7', '#38AAEB', '#38CCCE']} style={styles.linearGradient}>
+        <View style={styles.button2}>
+          <Text style={styles.buttonText2}>RENT</Text>
+        </View>
+      </LinearGradient>
     </View>
   );
 }

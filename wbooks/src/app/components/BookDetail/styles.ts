@@ -1,14 +1,22 @@
 import { StyleSheet } from 'react-native';
-import { gray, white } from '@constants/colors';
+import { gray, white, pictonBlue, WildSand } from '@constants/colors';
 
 const styles = StyleSheet.create({
   book: {
     alignItems: 'center',
     flexDirection: 'column',
+    backgroundColor: white,
     marginTop: 94,
     marginHorizontal: 24,
     marginBottom: 308,
-    backgroundColor: gray
+    elevation: 2,
+    shadowOffset: {
+      height: 0.5,
+      width: 4
+    },
+    shadowOpacity: 1,
+    shadowColor: gray,
+    borderRadius: 7
   },
   bookImage: {
     height: 104,
@@ -28,8 +36,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 15,
     marginLeft: 12,
-    marginRight: 29,
-    backgroundColor: white
+    marginRight: 29
   },
   title: {
     fontWeight: '700',
@@ -53,15 +60,42 @@ const styles = StyleSheet.create({
     width: 277,
     height: 46,
     marginTop: 26,
+    marginBottom: 10,
     marginHorizontal: 25,
-    backgroundColor: 'red'
+    borderRadius: 27,
+    borderStyle: 'solid',
+    borderWidth: 2,
+    borderColor: pictonBlue
+  },
+
+  buttonText1: {
+    color: pictonBlue,
+    textAlign: 'center',
+    marginVertical: 12,
+    fontWeight: '700',
+    fontSize: 16,
+    lineHeight: 18,
+    letterSpacing: -0.333333
   },
   button2: {
     width: 277,
     height: 46,
-    marginTop: 10,
-    marginHorizontal: 25,
-    backgroundColor: 'green'
+    borderRadius: 27
+  },
+
+  linearGradient: {
+    borderRadius: 27,
+    marginBottom: 18
+  },
+
+  buttonText2: {
+    color: white,
+    textAlign: 'center',
+    marginVertical: 14,
+    fontWeight: '700',
+    fontSize: 16,
+    lineHeight: 18,
+    letterSpacing: -0.333333
   }
 });
 

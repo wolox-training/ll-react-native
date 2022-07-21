@@ -3,3 +3,4 @@ export const gray = '#818181';
 export const white = '#FFFFFF';
 export const pictonBlue = '#38AAEB';
 export const aliceBlue = '#EFF9FF';
+export const WildSand = '#F5F5F5';
