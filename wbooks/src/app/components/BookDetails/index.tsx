@@ -1,34 +1,27 @@
 import React from 'react';
-import { View, Text, Image, Pressable } from 'react-native';
+import { View, Image, Text } from 'react-native';
 import defaultImg from '@assets/defaultBook.png';
-import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 
 export interface BookProps {
+  imageUrl?: any;
   title: string;
   author: string;
-  imageUrl?: any;
-  id: number;
+  year: string;
 }
 
-function Book({ title, author, imageUrl }: BookProps) {
-  const navigation = useNavigation();
+function BookDetails({ imageUrl, title, author, year }: BookProps) {
   return (
-    <Pressable
-      style={styles.pressable}
-      onPress={() =>
-        navigation.navigate('Details', {
-          undefined
-        })
-      }>
+    <View style={styles.book}>
       <Image style={styles.bookImage} source={imageUrl ? imageUrl : defaultImg} />
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.author}>{author}</Text>
+        <Text style={styles.year}>{year}</Text>
       </View>
-    </Pressable>
+    </View>
   );
 }
 
-export default Book;
+export default BookDetails;

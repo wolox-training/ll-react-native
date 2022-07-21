@@ -3,15 +3,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from './screens/Home';
+import DetailBook from './screens/DatailsBook';
 
-const Stack = createNativeStackNavigator();
+const RootStack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
-      </Stack.Navigator>
+      <RootStack.Navigator>
+        <RootStack.Screen name="Home" component={Home} />
+        <RootStack.Screen name="Details" component={DetailBook} options={{ title: 'BookDetails' }} />
+      </RootStack.Navigator>
     </NavigationContainer>
   );
 };
