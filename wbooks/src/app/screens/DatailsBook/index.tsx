@@ -1,6 +1,6 @@
 import React from 'react';
 import DetailsBook from '@app/components/BookDetail';
-import { View, Image, Text } from 'react-native';
+import { View } from 'react-native';
 
 import styles from './styles';
 
