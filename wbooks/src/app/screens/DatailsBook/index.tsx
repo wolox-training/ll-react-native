@@ -4,11 +4,11 @@ import { View } from 'react-native';
 
 import styles from './styles';
 
-function DetailBook() {
+function BookDetail() {
   return (
     <View style={styles.screen}>
       <DetailsBook />
     </View>
   );
 }
-export default DetailBook;
+export default BookDetail;

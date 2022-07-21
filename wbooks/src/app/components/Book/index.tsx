@@ -15,17 +15,16 @@ export interface BookProps {
 
 function Book({ title, author, imageUrl, year }: BookProps) {
   const navigation = useNavigation();
+  const handleNavegation = () =>
+    navigation.navigate('Details', {
+      imageUrl,
+      title,
+      author,
+      year
+    });
+
   return (
-    <Pressable
-      style={styles.pressable}
-      onPress={() =>
-        navigation.navigate('Details', {
-          imageUrl,
-          title,
-          author,
-          year
-        })
-      }>
+    <Pressable style={styles.pressable} onPress={handleNavegation}>
       <Image style={styles.bookImage} source={imageUrl ? imageUrl : defaultImg} />
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>
