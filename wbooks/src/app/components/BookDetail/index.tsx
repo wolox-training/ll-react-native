@@ -26,11 +26,13 @@ function BookDetail() {
           <Text style={styles.year}>{year}</Text>
         </View>
       </View>
-      <View style={styles.button1}>
+      <View style={[styles.button1, styles.button]}>
         <Text style={styles.buttonText1}>ADD TO WISHLIST</Text>
       </View>
-      <LinearGradient colors={['#1EACB7', '#38AAEB', '#38CCCE']} style={styles.linearGradient}>
-        <View style={styles.button2}>
+      <LinearGradient
+        colors={['#1EACB7', '#38AAEB', '#38CCCE']}
+        style={[styles.linearGradient, styles.button]}>
+        <View style={styles.button}>
           <Text style={styles.buttonText2}>RENT</Text>
         </View>
       </LinearGradient>

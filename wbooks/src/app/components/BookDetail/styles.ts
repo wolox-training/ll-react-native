@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 1,
     shadowColor: gray,
-    borderRadius: 7
+    borderRadius: 7,
+    paddingHorizontal: 25
   },
   bookImage: {
     height: 104,
     width: 66,
-    marginTop: 15,
-    marginLeft: 25
+    marginTop: 15
   },
 
   infoContainer: {
@@ -35,8 +35,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     textAlign: 'center',
     marginTop: 15,
-    marginLeft: 12,
-    marginRight: 29
+    marginLeft: 12
   },
   title: {
     fontWeight: '700',
@@ -57,15 +56,17 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   button1: {
-    width: 277,
-    height: 46,
     marginTop: 26,
     marginBottom: 10,
-    marginHorizontal: 25,
-    borderRadius: 27,
     borderStyle: 'solid',
     borderWidth: 2,
     borderColor: pictonBlue
+  },
+
+  button: {
+    alignSelf: 'stretch',
+    height: 46,
+    borderRadius: 27
   },
 
   buttonText1: {
@@ -77,14 +78,7 @@ const styles = StyleSheet.create({
     lineHeight: 18,
     letterSpacing: -0.333333
   },
-  button2: {
-    width: 277,
-    height: 46,
-    borderRadius: 27
-  },
-
   linearGradient: {
-    borderRadius: 27,
     marginBottom: 18
   },
 
