@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from './screens/Home';
-import DetailBook from './screens/DatailsBook';
+import BookDetails from './screens/BookDetails';
 
 const RootStack = createNativeStackNavigator();
 
@@ -12,7 +12,7 @@ const App = () => {
     <NavigationContainer>
       <RootStack.Navigator>
         <RootStack.Screen name="Home" component={Home} />
-        <RootStack.Screen name="Details" component={DetailBook} options={{ title: 'BookDetails' }} />
+        <RootStack.Screen name="Details" component={BookDetails} options={{ title: 'BookDetails' }} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
