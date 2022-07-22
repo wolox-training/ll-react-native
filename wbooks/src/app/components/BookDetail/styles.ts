@@ -47,13 +47,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     marginBottom: 2
   },
-  author: {
-    fontWeight: '400',
-    fontSize: 14,
-    lineHeight: 17,
-    textAlign: 'center'
-  },
-  year: {
+  authorANDyear: {
     fontWeight: '400',
     fontSize: 14,
     lineHeight: 17,
