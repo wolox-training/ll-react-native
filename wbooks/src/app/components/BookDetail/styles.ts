@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
     backgroundColor: white,
     marginTop: isSmall ? 60 : 94,
     marginHorizontal: 24,
-    marginBottom: 308,
     elevation: 2,
     shadowOffset: {
       height: 0.5,

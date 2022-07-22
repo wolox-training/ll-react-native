@@ -3,19 +3,14 @@ import { View, Image, Text } from 'react-native';
 import defaultImg from '@assets/defaultBook.png';
 import { useRoute } from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
+import { EasternBlue, pictonBlue, Turquoise } from '@constants/colors';
+import { BookProps } from '@interfaces/BookProps';
 
 import styles from './styles';
 
-export interface RouteParams {
-  title: string;
-  author: string;
-  imageUrl?: any;
-  year: string;
-}
-
 function BookDetail() {
   const route = useRoute();
-  const { title, author, imageUrl, year }: RouteParams = route.params;
+  const { title, author, imageUrl, year }: BookProps = route.params;
   return (
     <View style={styles.book}>
       <View style={styles.infoContainer}>
@@ -30,7 +25,7 @@ function BookDetail() {
         <Text style={styles.buttonText1}>ADD TO WISHLIST</Text>
       </View>
       <LinearGradient
-        colors={['#1EACB7', '#38AAEB', '#38CCCE']}
+        colors={[EasternBlue, pictonBlue, Turquoise]}
         style={[styles.linearGradient, styles.button]}>
         <View style={styles.button}>
           <Text style={styles.buttonText2}>RENT</Text>

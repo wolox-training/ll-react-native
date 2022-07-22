@@ -2,16 +2,9 @@ import React from 'react';
 import { View, Text, Image, Pressable } from 'react-native';
 import defaultImg from '@assets/defaultBook.png';
 import { useNavigation } from '@react-navigation/native';
+import { BookProps } from '@interfaces/BookProps';
 
 import styles from './styles';
-
-export interface BookProps {
-  title: string;
-  author: string;
-  imageUrl?: any;
-  id: number;
-  year: string;
-}
 
 function Book({ title, author, imageUrl, year }: BookProps) {
   const navigation = useNavigation();
