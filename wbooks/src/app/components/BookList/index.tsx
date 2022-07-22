@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, FlatList, Pressable } from 'react-native';
+import { SafeAreaView, FlatList } from 'react-native';
 import Book, { BookProps } from '@components/Book';
 import { BOOKS_MOCK } from '@constants/mockBooks';
 
@@ -9,7 +9,9 @@ const BookList = () => {
     return key.toString();
   };
   const renderItem = ({ item }: { item: BookProps; index: number }) => {
-    return <Book id={item.id} title={item.title} author={item.author} imageUrl={item.imageUrl} />;
+    return (
+      <Book id={item.id} title={item.title} author={item.author} imageUrl={item.imageUrl} year={item.year} />
+    );
   };
   return (
     <SafeAreaView>

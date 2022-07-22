@@ -1,13 +1,13 @@
 import React from 'react';
+import BookDetail from '@app/components/BookDetail';
 import { View } from 'react-native';
-import BookDetails from '@app/components/BookDetails';
 
 import styles from './styles';
 
-function BookDetail() {
+function BookDetails() {
   return (
-    <View style={styles.home}>
-      <BookDetails />
+    <View style={styles.screen}>
+      <BookDetail />
     </View>
   );
 }
