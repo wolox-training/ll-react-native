@@ -24,7 +24,7 @@ function BookDetail() {
       <View style={[styles.button1, styles.button]}>
         <Text style={styles.buttonText1}>ADD TO WISHLIST</Text>
       </View>
-      {/* <LinearGradient
+      {/*  <LinearGradient
         colors={[EasternBlue, pictonBlue, Turquoise]}
         style={[styles.linearGradient, styles.button]}>
         <View style={styles.button}>
