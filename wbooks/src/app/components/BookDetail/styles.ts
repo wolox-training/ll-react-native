@@ -9,7 +9,6 @@ const isSmall = DEVICE_HEIGHT < 534;
 const styles = StyleSheet.create({
   book: {
     alignItems: 'center',
-    flexDirection: 'column',
     backgroundColor: white,
     marginTop: isSmall ? 60 : 94,
     marginHorizontal: 24,
