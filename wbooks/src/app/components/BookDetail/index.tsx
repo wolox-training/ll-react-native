@@ -17,8 +17,8 @@ function BookDetail() {
         <Image style={styles.bookImage} source={imageUrl ? imageUrl : defaultImg} />
         <View style={styles.textContainer}>
           <Text style={styles.title}>{title}</Text>
-          <Text style={styles.author}>{author}</Text>
-          <Text style={styles.year}>{year}</Text>
+          <Text style={styles.authorANDyear}>{author}</Text>
+          <Text style={styles.authorANDyear}>{year}</Text>
         </View>
       </View>
       <View style={[styles.button1, styles.button]}>

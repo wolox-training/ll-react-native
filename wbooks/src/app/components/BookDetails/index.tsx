@@ -1,15 +1,9 @@
 import React from 'react';
 import { View, Image, Text } from 'react-native';
 import defaultImg from '@assets/defaultBook.png';
+import { BookProps } from '@interfaces/BookProps';
 
 import styles from './styles';
-
-export interface BookProps {
-  imageUrl?: any;
-  title: string;
-  author: string;
-  year: string;
-}
 
 function BookDetails({ imageUrl, title, author, year }: BookProps) {
   return (
