@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { WildSand } from '@constants/colors';
+import { white, WildSand, gray } from '@constants/colors';
 
 const styles = StyleSheet.create({
   screen: {
