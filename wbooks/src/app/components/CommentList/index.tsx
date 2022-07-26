@@ -1,10 +1,11 @@
-import React from 'react';
-import { SafeAreaView, FlatList } from 'react-native';
+import React, { useState } from 'react';
+import { SafeAreaView, FlatList, Button } from 'react-native';
 import Comment from '@app/components/Comment';
 import { CommentProps } from '@interfaces/CommentProps';
 import { COMMENTS_MOCK } from '@constants/mockComments';
 
 const CommentList = () => {
+  const [pressed, setValue] = useState(false);
   const keyExtractor = (item: CommentProps) => {
     const key = item.id;
     return key.toString();
@@ -14,7 +15,12 @@ const CommentList = () => {
   };
   return (
     <SafeAreaView>
-      <FlatList data={COMMENTS_MOCK} renderItem={renderItem} keyExtractor={keyExtractor} />
+      <FlatList
+        data={pressed ? COMMENTS_MOCK : COMMENTS_MOCK.slice(0, 2)}
+        renderItem={renderItem}
+        keyExtractor={keyExtractor}
+      />
+      <Button title="View All" onPress={() => setValue(true)} />
     </SafeAreaView>
   );
 };

@@ -16,7 +16,9 @@ function BookDetail() {
       <View style={styles.infoContainer}>
         <Image style={styles.bookImage} source={imageUrl ? imageUrl : defaultImg} />
         <View style={styles.textContainer}>
-          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.title} numberOfLines={1}>
+            {title}
+          </Text>
           <Text style={styles.authorANDyear}>{author}</Text>
           <Text style={styles.authorANDyear}>{year}</Text>
         </View>

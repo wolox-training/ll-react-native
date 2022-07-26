@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { gray, black, Alto, white } from '@constants/colors';
+import { gray, black, Alto } from '@constants/colors';
 
 const IMAGE_SIZE = 50;
 
