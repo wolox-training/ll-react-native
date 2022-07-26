@@ -1,10 +1,10 @@
 import React from 'react';
 import { SafeAreaView, FlatList } from 'react-native';
-import Comment from '@components/Comments';
+import Comment from '@app/components/Comment';
 import { CommentProps } from '@interfaces/CommentProps';
 import { COMMENTS_MOCK } from '@constants/mockComments';
 
-const BookList = () => {
+const CommentList = () => {
   const keyExtractor = (item: CommentProps) => {
     const key = item.id;
     return key.toString();
@@ -19,4 +19,4 @@ const BookList = () => {
   );
 };
 
-export default BookList;
+export default CommentList;

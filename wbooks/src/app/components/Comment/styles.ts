@@ -4,31 +4,16 @@ import { gray, black, Alto, white } from '@constants/colors';
 const IMAGE_SIZE = 50;
 
 const styles = StyleSheet.create({
-  commentContainer: {
-    alignSelf: 'center',
-    width: '88%',
-    backgroundColor: white,
-    elevation: 2,
-    shadowOffset: {
-      height: 1,
-      width: 4
-    },
-    shadowOpacity: 1,
-    shadowColor: gray,
-    borderRadius: 7
-  },
   comment: {
-    alignSelf: 'center',
-    flexDirection: 'column',
-    width: '93%',
-    marginHorizontal: 24
+    alignSelf: 'stretch',
+    flexDirection: 'column'
   },
 
   line: {
     width: '90%',
     height: 1,
     backgroundColor: Alto,
-    marginTop: '15%'
+    marginTop: 15
   },
 
   infoContainer: {
@@ -37,10 +22,10 @@ const styles = StyleSheet.create({
 
   textCommentContainer: {
     flex: 1,
+    alignSelf: 'stretch',
     flexDirection: 'column',
-    height: 120,
     marginTop: 15,
-    marginRight: 26
+    marginRight: 25
   },
 
   commentImage: {

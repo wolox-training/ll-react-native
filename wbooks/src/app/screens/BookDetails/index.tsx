@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentList from '@app/components/CommentList';
+import CommentsList from '@app/components/CommentList';
 import BookDetail from '@app/components/BookDetail';
 import { View } from 'react-native';
 
@@ -9,7 +9,9 @@ function BookDetails() {
   return (
     <View style={styles.screen}>
       <BookDetail />
-      <CommentList />
+      <View style={styles.commentsContainer}>
+        <CommentsList />
+      </View>
     </View>
   );
 }
