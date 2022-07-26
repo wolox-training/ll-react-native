@@ -4,6 +4,8 @@ import Comment from '@app/components/Comment';
 import { CommentProps } from '@interfaces/CommentProps';
 import { COMMENTS_MOCK } from '@constants/mockComments';
 
+import styles from './styles';
+
 const CommentList = () => {
   const [pressed, setPressed] = useState(false);
   const data = pressed ? COMMENTS_MOCK : COMMENTS_MOCK.slice(0, 2);
@@ -14,7 +16,7 @@ const CommentList = () => {
     <SafeAreaView>
       {renderList}
       <Pressable onPress={() => setPressed(true)}>
-        <Text>View All</Text>
+        <Text style={styles.button}>View All</Text>
       </Pressable>
     </SafeAreaView>
   );
