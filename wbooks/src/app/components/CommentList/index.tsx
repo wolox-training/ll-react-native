@@ -6,7 +6,7 @@ import { COMMENTS_MOCK } from '@constants/mockComments';
 
 const CommentList = () => {
   const [pressed, setPressed] = useState(false);
-  const data = pressed ? COMMENTS_MOCK : COMMENTS_MOCK.slice(COMMENTS_MOCK.length - 2, COMMENTS_MOCK.length);
+  const data = pressed ? COMMENTS_MOCK : COMMENTS_MOCK.slice(0, 2);
   const renderList = data.map((item: CommentProps) => {
     return <Comment id={item.id} url={item.url} author={item.author} text={item.text} key={item.id} />;
   });
