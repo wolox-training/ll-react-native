@@ -1,19 +1,21 @@
 import { StyleSheet } from 'react-native';
 import { gray, black, Alto } from '@constants/colors';
 
+const IMAGE_SIZE = 50;
+
 const styles = StyleSheet.create({
   comment: {
     alignSelf: 'center',
     flexDirection: 'column',
-    width: 360,
+    width: '93%',
     marginHorizontal: 24
   },
 
   line: {
-    marginTop: 15,
-    width: 219,
+    width: '90%',
     height: 1,
-    backgroundColor: Alto
+    backgroundColor: Alto,
+    marginTop: '11%'
   },
 
   infoContainer: {
@@ -29,8 +31,8 @@ const styles = StyleSheet.create({
   },
 
   commentImage: {
-    height: 50,
-    width: 50,
+    height: IMAGE_SIZE,
+    width: IMAGE_SIZE,
     marginLeft: 25,
     marginRight: 13,
     marginTop: 15,
