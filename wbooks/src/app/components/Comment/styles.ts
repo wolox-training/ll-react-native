@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { gray, black, Alto } from '@constants/colors';
+import { gray, black, alto } from '@constants/colors';
 
 const IMAGE_SIZE = 50;
 
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   line: {
     width: '90%',
     height: 1,
-    backgroundColor: Alto,
+    backgroundColor: alto,
     marginTop: 15
   },
 

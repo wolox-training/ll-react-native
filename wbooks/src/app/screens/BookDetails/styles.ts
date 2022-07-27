@@ -3,7 +3,6 @@ import { white, WildSand, gray } from '@constants/colors';
 
 const styles = StyleSheet.create({
   screen: {
-    height: '100%',
     backgroundColor: WildSand
   },
   commentsContainer: {

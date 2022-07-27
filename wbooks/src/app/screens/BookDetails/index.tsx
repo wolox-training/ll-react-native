@@ -8,7 +8,7 @@ import styles from './styles';
 
 function BookDetails() {
   return (
-    <ScrollView style={styles.screen}>
+    <ScrollView>
       <BookDetail />
       <View style={styles.commentsContainer}>
         <CommentsList />

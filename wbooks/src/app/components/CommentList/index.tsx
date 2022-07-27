@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SafeAreaView, Text, Pressable } from 'react-native';
-import Comment from '@app/components/Comment';
+import Comment from '@components/Comment';
 import { CommentProps } from '@interfaces/CommentProps';
 import { COMMENTS_MOCK } from '@constants/mockComments';
 
