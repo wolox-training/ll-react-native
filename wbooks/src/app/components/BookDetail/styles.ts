@@ -1,18 +1,13 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { gray, white, pictonBlue } from '@constants/colors';
-
-const screen = Dimensions.get('screen');
-const DEVICE_HEIGHT = Math.max(screen.width, screen.height);
-
-const isSmall = DEVICE_HEIGHT < 534;
 
 const styles = StyleSheet.create({
   book: {
     alignItems: 'center',
-    flexDirection: 'column',
     backgroundColor: white,
-    marginTop: isSmall ? 60 : 94,
+    marginTop: 20,
     marginHorizontal: 24,
+    marginBottom: 20,
     elevation: 2,
     shadowOffset: {
       height: 0.5,

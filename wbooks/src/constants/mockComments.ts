@@ -1,16 +1,18 @@
+import comment1 from '@assets/bookComments/comment1/Cover.png';
+import comment2 from '@assets/bookComments/comment2/Cover.png';
+
 export const COMMENTS_MOCK = [
   {
     id: 0,
     author: 'Emmie Thiel',
-    text:
-      'It was great to see you again earlier. Let’s definitely get that coffe It was great to see you again earlier.',
-    url: null
+    text: 'It was great to see you again earlier. Let’s definitely get that coffe It was great to see you again earlier.',
+    url: comment1
   },
   {
     id: 1,
     author: 'Slash',
     text: 'Let’s definitely get that coffe It was great to see you again earlier.',
-    url: null
+    url: comment2
   },
   {
     id: 2,

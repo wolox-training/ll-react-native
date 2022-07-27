@@ -1,10 +1,10 @@
 import { StyleSheet } from 'react-native';
-import { aliceBlue } from '@constants/colors';
+import { WildSand } from '@constants/colors';
 
 const styles = StyleSheet.create({
   home: {
     flex: 1,
-    backgroundColor: aliceBlue,
+    backgroundColor: WildSand,
     paddingTop: 15
   }
 });
