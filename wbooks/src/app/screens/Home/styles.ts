@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
   home: {
     flex: 1,
     backgroundColor: WildSand,
-    paddingTop: 15
+    paddingTop: 20
   }
 });
 export default styles;
