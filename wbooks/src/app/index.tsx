@@ -63,8 +63,7 @@ const App = () => {
             title: 'SETTINGS',
             headerStyle,
             headerTitleStyle,
-            headerTintColor: white,
-            headerLeft: () => <BackButton />
+            headerTintColor: white
           }}
         />
       </Tab.Navigator>
