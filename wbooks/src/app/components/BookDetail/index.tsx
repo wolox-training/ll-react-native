@@ -1,16 +1,19 @@
 import React from 'react';
-import { View, Image, Text } from 'react-native';
+import { View, Image, Text, Pressable } from 'react-native';
 import defaultImg from '@assets/defaultBook.png';
 import { useRoute } from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 import { EasternBlue, pictonBlue, Turquoise } from '@constants/colors';
 import { BookProps } from '@interfaces/BookProps';
+import { useDispatch } from 'react-redux';
+import { BOOKS_MOCK } from '@constants/mockBooks';
 
 import styles from './styles';
 
 function BookDetail() {
   const route = useRoute();
   const { title, author, imageUrl, year }: BookProps = route.params;
+  const dispatch = useDispatch();
   return (
     <View style={styles.book}>
       <View style={styles.infoContainer}>
@@ -29,9 +32,11 @@ function BookDetail() {
       <LinearGradient
         colors={[EasternBlue, pictonBlue, Turquoise]}
         style={[styles.linearGradient, styles.button]}>
-        <View style={styles.button}>
+        <Pressable
+          style={styles.button}
+          onPress={() => dispatch({ type: 'REMOVE_YEAR', payload: BOOKS_MOCK.slice(3, 5) })}>
           <Text style={styles.buttonText2}>RENT</Text>
-        </View>
+        </Pressable>
       </LinearGradient>
     </View>
   );
