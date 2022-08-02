@@ -4,6 +4,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { white } from '@constants/colors';
 import { View, Text } from 'react-native';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { store } from '@redux/store';
 
 import { headerStyle, headerTitleStyle } from './styles';
 import Home from './screens/Home';
@@ -12,34 +15,35 @@ import BackButton from './components/BackButton';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-
 const Library = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{
-          title: 'HOME',
-          headerStyle,
-          headerTintColor: white,
-          headerTitleStyle,
-          headerBackTitleVisible: false
-        }}
-      />
+    <Provider store={store}>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: 'HOME',
+            headerStyle,
+            headerTintColor: white,
+            headerTitleStyle,
+            headerBackTitleVisible: false
+          }}
+        />
 
-      <Stack.Screen
-        name="Details"
-        component={BookDetails}
-        options={{
-          title: 'BOOK DETAIL',
-          headerStyle,
-          headerTitleStyle,
-          headerTintColor: white,
-          headerLeft: () => <BackButton />
-        }}
-      />
-    </Stack.Navigator>
+        <Stack.Screen
+          name="Details"
+          component={BookDetails}
+          options={{
+            title: 'BOOK DETAIL',
+            headerStyle,
+            headerTitleStyle,
+            headerTintColor: white,
+            headerLeft: () => <BackButton />
+          }}
+        />
+      </Stack.Navigator>
+    </Provider>
   );
 };
 
