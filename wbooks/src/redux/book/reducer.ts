@@ -9,9 +9,15 @@ interface Action {
 
 function reducer(state = initialState, action: Action) {
   switch (action.type) {
-    case 'ADD_BOOKS':
+    case 'GET_BOOKS':
       return {
         bookList: action.payload
+      };
+    case 'ADD_BOOK':
+      const newBookList = state.bookList;
+      newBookList.push(action.payload);
+      return {
+        bookList: newBookList
       };
     default:
       return state;

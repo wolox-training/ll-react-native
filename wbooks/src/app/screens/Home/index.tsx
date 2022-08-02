@@ -9,7 +9,7 @@ import styles from './styles';
 function Home() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch({ type: 'ADD_BOOKS', payload: BOOKS_MOCK });
+    dispatch({ type: 'GET_BOOKS', payload: BOOKS_MOCK });
   });
   return (
     <View style={styles.home}>
