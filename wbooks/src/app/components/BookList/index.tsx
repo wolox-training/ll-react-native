@@ -27,7 +27,6 @@ const BookList = () => {
   const addBook = () => dispatch({ type: 'ADD_BOOK', payload: newBook });
 
   const books = useSelector(state => state.bookList);
-  console.log(books);
   return (
     <SafeAreaView>
       <Button title="ADD BOOK" onPress={addBook} />
