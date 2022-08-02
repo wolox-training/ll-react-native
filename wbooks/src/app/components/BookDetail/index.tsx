@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text, Pressable } from 'react-native';
+import { View, Image, Text } from 'react-native';
 import defaultImg from '@assets/defaultBook.png';
 import { useRoute } from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
