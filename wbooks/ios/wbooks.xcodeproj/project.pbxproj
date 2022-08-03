@@ -20,6 +20,7 @@
 		811A79C19E8F8AD132E41CB8 /* libPods-wbooks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 865B9B16A8E6999E029D0484 /* libPods-wbooks.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C2F0F2C432AC9A324A57F0DF /* libPods-wbooks-wbooksTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FAF33012B680C79DD58954 /* libPods-wbooks-wbooksTests.a */; };
+		FDB15484289AAF280044C6E6 /* node_modules in Resources */ = {isa = PBXBuildFile; fileRef = FDB15483289AAF280044C6E6 /* node_modules */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F2627E322709C5A0B8028C96 /* Pods-wbooks-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wbooks-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-wbooks-tvOSTests/Pods-wbooks-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		F74DE5961DE3364580D1F2BD /* Pods-wbooks-wbooksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wbooks-wbooksTests.release.xcconfig"; path = "Target Support Files/Pods-wbooks-wbooksTests/Pods-wbooks-wbooksTests.release.xcconfig"; sourceTree = "<group>"; };
+		FDB15483289AAF280044C6E6 /* node_modules */ = {isa = PBXFileReference; lastKnownFileType = folder; name = node_modules; path = ../../node_modules; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				FDB15483289AAF280044C6E6 /* node_modules */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				FDB15484289AAF280044C6E6 /* node_modules in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
