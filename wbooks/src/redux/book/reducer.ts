@@ -13,12 +13,6 @@ function reducer(state = initialState, action: Action) {
       return {
         bookList: action.payload
       };
-    case 'ADD_BOOK':
-      const newBookList = state.bookList;
-      newBookList.push(action.payload);
-      return {
-        bookList: newBookList
-      };
     default:
       return state;
   }
