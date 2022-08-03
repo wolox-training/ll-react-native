@@ -4,7 +4,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { white } from '@constants/colors';
 import { View, Text } from 'react-native';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { store } from '@redux/store';
 
