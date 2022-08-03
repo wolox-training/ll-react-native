@@ -64,6 +64,7 @@ buck-out/
 
 # Env
 .env
+*.env
 
 # Jest
 #
