@@ -2,16 +2,14 @@ import React, { useEffect } from 'react';
 import { View } from 'react-native';
 import BookList from '@app/components/BookList';
 import { useDispatch } from 'react-redux';
-import { BOOKS_MOCK } from '@constants/mockBooks';
-import getByGenres from '@services/genderService';
+import addBoks from '@redux/book/actions';
 
 import styles from './styles';
 
 function Home() {
-  getByGenres();
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch({ type: 'GET_BOOKS', payload: BOOKS_MOCK });
+    dispatch(addBoks());
   });
   return (
     <View style={styles.home}>
