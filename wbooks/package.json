@@ -37,6 +37,7 @@
     "react-redux": "^8.0.2",
     "redux": "^4.2.0",
     "redux-mock-store": "^1.5.4",
+    "redux-recompose": "^3.0.0",
     "redux-thunk": "^2.4.1",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.1.1"

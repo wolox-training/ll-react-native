@@ -1,7 +1,19 @@
-import { BOOKS_MOCK } from '@constants/mockBooks';
+import { createTypes, completeTypes } from 'redux-recompose';
+import { getBooks } from '@services/bookService';
 
-function addBoks() {
-  return { type: 'GET_BOOKS', payload: BOOKS_MOCK };
-}
+export const actions = createTypes(
+  completeTypes({
+    primaryActions: ['GET_BOOKS']
+  }),
+  '@@BOOK'
+);
 
-export default addBoks;
+const actionCreators = {
+  getBooks: () => ({
+    type: actions.GET_BOOKS,
+    target: 'booksList',
+    service: getBooks
+  })
+};
+
+export default actionCreators;
