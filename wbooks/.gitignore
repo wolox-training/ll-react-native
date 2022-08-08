@@ -72,5 +72,10 @@ buck-out/
 coverage/
 
 # watchman
+.watchman-cookie-AMAC02FLA05MD6M-1357-492
+.watchman-cookie-AMAC02FLA05MD6M-1357-493
+.watchman-cookie-AMAC02FLA05MD6M-1357-494
+.watchman-cookie-AMAC02FLA05MD6M-1357-495
+.watchman-cookie-AMAC02FLA05MD6M-1634-211
 .watchman-cookie*
 
