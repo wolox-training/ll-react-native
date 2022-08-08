@@ -5,7 +5,7 @@ import { actions } from './actions';
 
 const stateDescription = {
   description: {
-    commentList: []
+    commentsList: []
   }
 };
 

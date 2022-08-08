@@ -5,7 +5,7 @@ export const actions = createTypes(
   completeTypes({
     primaryActions: ['GET_COMMENTS']
   }),
-  '@@BOOK'
+  '@@COMMENTS'
 );
 
 export const actionCreators = {
