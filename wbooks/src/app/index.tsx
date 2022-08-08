@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { white } from '@constants/colors';
 import { View, Text } from 'react-native';
 import { Provider } from 'react-redux';
-import { store } from '@redux/store';
+import store from '@redux/store';
 
 import { headerStyle, headerTitleStyle } from './styles';
 import Home from './screens/Home';

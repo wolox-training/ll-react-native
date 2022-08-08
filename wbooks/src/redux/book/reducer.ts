@@ -1,21 +1,23 @@
-const initialState = {
-  bookList: []
+import { createReducer, completeState, completeReducer, onReadValue } from 'redux-recompose';
+import Immutable from 'seamless-immutable';
+
+import { actions } from './actions';
+
+const stateDescription = {
+  description: {
+    booksList: []
+  }
 };
 
-interface Action {
-  type: string;
-  payload: any;
-}
+const initialState = completeState(stateDescription);
 
-function reducer(state = initialState, action: Action) {
-  switch (action.type) {
-    case 'GET_BOOKS':
-      return {
-        bookList: action.payload
-      };
-    default:
-      return state;
-  }
-}
+const reducerDescription = {
+  primaryActions: [actions.GET_BOOKS],
+  override: {}
+};
 
-export default reducer;
+export default createReducer(
+  Immutable(initialState),
+
+  completeReducer(reducerDescription)
+);
