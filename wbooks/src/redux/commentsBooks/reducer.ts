@@ -5,14 +5,14 @@ import { actions } from './actions';
 
 const stateDescription = {
   description: {
-    booksList: []
+    commentList: []
   }
 };
 
 const initialState = completeState(stateDescription);
 
 const reducerDescription = {
-  primaryActions: [actions.GET_BOOKS],
+  primaryActions: [actions.GET_COMMENTS],
   override: {}
 };
 
