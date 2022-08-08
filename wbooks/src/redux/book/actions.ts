@@ -8,12 +8,10 @@ export const actions = createTypes(
   '@@BOOK'
 );
 
-const actionCreators = {
+export const actionCreators = {
   getBooks: () => ({
     type: actions.GET_BOOKS,
     target: 'booksList',
     service: getBooks
   })
 };
-
-export default actionCreators;
