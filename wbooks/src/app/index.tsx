@@ -64,9 +64,7 @@ const App = () => {
             component={BookDetails}
             options={{
               title: 'BOOK DETAIL',
-              headerStyle,
-              headerTitleStyle,
-              headerTintColor: white,
+              ...headerStyles,
               headerLeft: () => <BackButton />
             }}
           />
