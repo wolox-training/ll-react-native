@@ -1,4 +1,4 @@
-import { pictonBlue, white } from '@constants/colors';
+import { pictonBlue, white, red } from '@constants/colors';
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -39,6 +39,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 18,
     letterSpacing: -0.333333
+  },
+
+  dangerText: {
+    marginTop: '5%',
+    color: red,
+    fontWeight: '500',
+    fontSize: 18,
+    textAlign: 'center'
   }
 });
 
