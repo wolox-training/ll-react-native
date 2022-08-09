@@ -11,41 +11,10 @@ import { headerStyle, headerTitleStyle } from './styles';
 import Home from './screens/Home';
 import BookDetails from './screens/BookDetails';
 import BackButton from './components/BackButton';
+import Login from './screens/Login';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-const Library = () => {
-  return (
-    <Provider store={store}>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{
-            title: 'HOME',
-            headerStyle,
-            headerTintColor: white,
-            headerTitleStyle,
-            headerBackTitleVisible: false
-          }}
-        />
-
-        <Stack.Screen
-          name="Details"
-          component={BookDetails}
-          options={{
-            title: 'BOOK DETAIL',
-            headerStyle,
-            headerTitleStyle,
-            headerTintColor: white,
-            headerLeft: () => <BackButton />
-          }}
-        />
-      </Stack.Navigator>
-    </Provider>
-  );
-};
-
 const Settings = () => {
   return (
     <View>
@@ -53,24 +22,65 @@ const Settings = () => {
     </View>
   );
 };
+const Library = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          title: 'HOME',
+          headerStyle,
+          headerTintColor: white,
+          headerTitleStyle
+        }}
+      />
+      <Tab.Screen
+        name="Settings"
+        component={Settings}
+        options={{
+          title: 'SETTINGS',
+          headerStyle,
+          headerTitleStyle,
+          headerTintColor: white
+        }}
+      />
+    </Tab.Navigator>
+  );
+};
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Library" component={Library} options={{ headerShown: false }} />
-        <Tab.Screen
-          name="Settings"
-          component={Settings}
-          options={{
-            title: 'SETTINGS',
-            headerStyle,
-            headerTitleStyle,
-            headerTintColor: white
-          }}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+          <Stack.Screen
+            name="Library"
+            component={Library}
+            options={{
+              title: 'Library',
+              headerStyle,
+              headerTintColor: white,
+              headerTitleStyle,
+              headerBackTitleVisible: false
+            }}
+          />
+
+          <Stack.Screen
+            name="Details"
+            component={BookDetails}
+            options={{
+              title: 'BOOK DETAIL',
+              headerStyle,
+              headerTitleStyle,
+              headerTintColor: white,
+              headerLeft: () => <BackButton />
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 };
 
