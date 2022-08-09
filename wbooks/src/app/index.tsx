@@ -15,6 +15,12 @@ import Login from './screens/Login';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+const headerStyles = {
+  headerStyle,
+  headerTintColor: white,
+  headerTitleStyle
+};
+
 const Settings = () => {
   return (
     <View>
@@ -30,9 +36,7 @@ const Library = () => {
         component={Home}
         options={{
           title: 'HOME',
-          headerStyle,
-          headerTintColor: white,
-          headerTitleStyle
+          ...headerStyles
         }}
       />
       <Tab.Screen
@@ -40,9 +44,7 @@ const Library = () => {
         component={Settings}
         options={{
           title: 'SETTINGS',
-          headerStyle,
-          headerTitleStyle,
-          headerTintColor: white
+          ...headerStyles
         }}
       />
     </Tab.Navigator>
@@ -55,17 +57,7 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-          <Stack.Screen
-            name="Library"
-            component={Library}
-            options={{
-              title: 'Library',
-              headerStyle,
-              headerTintColor: white,
-              headerTitleStyle,
-              headerBackTitleVisible: false
-            }}
-          />
+          <Stack.Screen name="Library" component={Library} options={{ headerShown: false }} />
 
           <Stack.Screen
             name="Details"

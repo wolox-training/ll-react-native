@@ -17,15 +17,8 @@ const styles = StyleSheet.create({
     width: '100%'
   },
 
-  userNameInput: {
+  inputStyle: {
     marginBottom: 20,
-    borderWidth: 0.1,
-    backgroundColor: white,
-    height: 52
-  },
-
-  passWordInput: {
-    marginLeft: 90,
     borderWidth: 0.1,
     backgroundColor: white,
     height: 52
