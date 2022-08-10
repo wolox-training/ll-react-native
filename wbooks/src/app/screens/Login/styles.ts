@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     color: red,
     fontWeight: '500',
-    fontSize: 18,
+    fontSize: 13,
     textAlign: 'center'
   }
 });
