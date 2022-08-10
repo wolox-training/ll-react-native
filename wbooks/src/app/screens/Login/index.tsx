@@ -33,7 +33,6 @@ function Login() {
 
   const navigation = useNavigation();
   const homeNavegation = () => navigation.navigate('Library');
-  const onSubmit = handleSubmit(homeNavegation);
   return (
     <ImageBackground source={Background} style={styles.container}>
       <Image style={styles.mainLogoImage} source={mainLogo} />
@@ -88,7 +87,7 @@ function Login() {
           false
         )}
       </View>
-      <Pressable style={styles.button} onPress={handleSubmit(onSubmit)}>
+      <Pressable style={styles.button} onPress={handleSubmit(homeNavegation)}>
         <Text style={styles.buttonText}>SIGN IN</Text>
       </Pressable>
     </ImageBackground>
