@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
   },
 
   inputStyle: {
+    padding: 18,
     marginBottom: 20,
     borderWidth: 0.1,
     backgroundColor: white,
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
   },
 
   dangerText: {
-    marginTop: '5%',
+    marginBottom: 20,
     color: red,
     fontWeight: '500',
     fontSize: 18,

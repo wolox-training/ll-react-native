@@ -1,72 +1,95 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Image, Text, TextInput, Pressable, ImageBackground } from 'react-native';
+import { useForm, Controller } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/native';
 import Background from '@assets/BackgroundLoginScreen/Background.png';
 import mainLogo from '@assets/mainLogo/mainLogo.png';
 
 import styles from './styles';
 
+const isValidEmail = (email: string) =>
+  // eslint-disable-next-line no-useless-escape
+  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
+
 function Login() {
-  const [email, setEmail] = useState('');
-  const [emailValidError, setEmailValidError] = useState('');
-
-  const emailValidation = val => {
-    const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
-    if (val.length === 0) {
-      setEmailValidError('The email field cannot be empty.');
-    } else if (reg.test(val) === false) {
-      setEmailValidError('Please, enter a valid email.');
-    } else if (reg.test(val) === true) {
-      setEmailValidError('');
+  const {
+    control,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
+    defaultValues: {
+      email: '',
+      password: ''
     }
-  };
+  });
 
-  const [password, setPassword] = useState('');
-  const [passwordValidError, setPasswordValidError] = useState('');
+  const handleEmailValidation = (email: string) => {
+    const isValid = isValidEmail(email);
 
-  const passwordValidation = val => {
-    if (val.length === 0) {
-      setPasswordValidError('The password field cannot be empty.');
-    } else if (val.length < 8) {
-      setPasswordValidError('The password must be 8 characters.');
-      /* } else (val.length === 0 && < 8) // How can make this comparison?{
-      setEmailValidError('');  // */
-    }
+    return isValid;
   };
 
   const navigation = useNavigation();
   const homeNavegation = () => navigation.navigate('Library');
+  const onSubmit = handleSubmit(homeNavegation);
   return (
     <ImageBackground source={Background} style={styles.container}>
       <Image style={styles.mainLogoImage} source={mainLogo} />
       <View style={styles.inputsContainer}>
-        <TextInput
-          style={styles.inputStyle}
-          placeholder="Username"
-          value={email}
-          autoCorrect={false}
-          autoCapitalize="none"
-          onChangeText={value => {
-            setEmail(value);
-            emailValidation(value);
+        <Controller
+          control={control}
+          rules={{
+            required: true,
+            validate: handleEmailValidation
           }}
+          render={({ field: { onChange, onBlur, value } }) => (
+            <TextInput
+              style={styles.inputStyle}
+              onBlur={onBlur}
+              onChangeText={onChange}
+              value={value}
+              placeholder="Email"
+            />
+          )}
+          name="email"
         />
-        <TextInput
-          style={styles.inputStyle}
-          placeholder="Password"
-          value={password}
-          autoCorrect={false}
-          autoCapitalize="none"
-          onChangeText={value => {
-            setPassword(value);
-            passwordValidation(value);
+        {errors.email ? (
+          <Text style={styles.dangerText}>
+            {errors.email.type === 'required'
+              ? 'The email field cannot be empty.'
+              : 'Please, enter a valid email.'}
+          </Text>
+        ) : null}
+        <Controller
+          control={control}
+          rules={{
+            minLength: 8,
+            maxLength: 16,
+            required: true
           }}
+          render={({ field: { onChange, onBlur, value } }) => (
+            <TextInput
+              style={styles.inputStyle}
+              onBlur={onBlur}
+              onChangeText={onChange}
+              value={value}
+              placeholder="Password"
+            />
+          )}
+          name="password"
         />
+        {errors.password?.type === 'minLength' ? (
+          <Text style={styles.dangerText}>The password is too short.</Text>
+        ) : errors.password ? (
+          <Text style={styles.dangerText}>The password field cannot be empty.</Text>
+        ) : (
+          false
+        )}
       </View>
-      <Pressable style={styles.button}>
+      <Pressable style={styles.button} onPress={handleSubmit(onSubmit)}>
         <Text style={styles.buttonText}>SIGN IN</Text>
-        {emailValidError ? <Text style={styles.dangerText}>{emailValidError}</Text> : null}
-        {passwordValidError ? <Text style={styles.dangerText}>{passwordValidError}</Text> : null}
       </Pressable>
     </ImageBackground>
   );
