@@ -1,4 +1,5 @@
-import { createTypes, completeTypes } from 'redux-recompose';
+import { createTypes, completeTypes, withPostSuccess } from 'redux-recompose';
+import { loginInfo } from '@interfaces/loginInfo';
 import { login } from '@services/loginService';
 
 export const actions = createTypes(
@@ -9,9 +10,15 @@ export const actions = createTypes(
 );
 
 export const actionCreators = {
-  login: () => ({
+  login: (data: loginInfo, homeNavegation) => ({
     type: actions.LOGIN,
     target: 'loginData',
-    service: login
+    service: login,
+    payload: data,
+    injections: [
+      withPostSuccess(() => {
+        homeNavegation();
+      })
+    ]
   })
 };
