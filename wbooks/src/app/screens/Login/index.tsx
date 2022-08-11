@@ -43,16 +43,10 @@ function Login() {
     dispatch(actionCreators.login());
   };
 
-  const onSubmit = data =>
-    data.email === loginData.loginData.email ? console.log('yes') : console.log('no');
-  const test = loginData.loginData.email;
-  console.log(test);
+  const onSubmit = data => (data.email === loginData.loginData.email ? homeNavegation() : null);
 
-  /*   onSubmit.email === loginData.loginData.email ? true : null; */
-  /* loginData.loginData.email === 'Ignacio.coluccio@wolox.com.ar'
-      ? handleSubmit(homeNavegation)
-      : console.log('error');
- */
+  /* 'Ignacio.coluccio@wolox.com.ar' */
+  /* 'wolox1189' */
   return (
     <ImageBackground source={Background} style={styles.container}>
       <Image style={styles.mainLogoImage} source={mainLogo} />
