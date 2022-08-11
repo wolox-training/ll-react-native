@@ -1,7 +1,10 @@
 import React from 'react';
 import { View, Image, Text, TextInput, Pressable, ImageBackground } from 'react-native';
-import { useForm, Controller } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/native';
+import { useForm, Controller } from 'react-hook-form';
+import { useDispatch, useSelector } from 'react-redux';
+import { actionCreators } from '@redux/login/actions';
+import { State } from '@interfaces/state';
 import Background from '@assets/BackgroundLoginScreen/Background.png';
 import mainLogo from '@assets/mainLogo/mainLogo.png';
 
@@ -33,6 +36,23 @@ function Login() {
 
   const navigation = useNavigation();
   const homeNavegation = () => navigation.navigate('Library');
+
+  const dispatch = useDispatch();
+  const loginData = useSelector((state: State) => state.login);
+  const login = () => {
+    dispatch(actionCreators.login());
+  };
+
+  const onSubmit = data =>
+    data.email === loginData.loginData.email ? console.log('yes') : console.log('no');
+  const test = loginData.loginData.email;
+  console.log(test);
+
+  /*   onSubmit.email === loginData.loginData.email ? true : null; */
+  /* loginData.loginData.email === 'Ignacio.coluccio@wolox.com.ar'
+      ? handleSubmit(homeNavegation)
+      : console.log('error');
+ */
   return (
     <ImageBackground source={Background} style={styles.container}>
       <Image style={styles.mainLogoImage} source={mainLogo} />
@@ -87,7 +107,7 @@ function Login() {
           false
         )}
       </View>
-      <Pressable style={styles.button} onPress={handleSubmit(homeNavegation)}>
+      <Pressable style={styles.button} onPress={handleSubmit(onSubmit, login)}>
         <Text style={styles.buttonText}>SIGN IN</Text>
       </Pressable>
     </ImageBackground>

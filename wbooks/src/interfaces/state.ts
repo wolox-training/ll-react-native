@@ -8,4 +8,5 @@ export interface State {
     commentsListLoading: boolean;
     commentsListError: null | string;
   };
+  login: { loginData: {}; loginDataLoading: boolean; loginDataError: null | string };
 }
