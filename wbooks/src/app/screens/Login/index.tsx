@@ -43,8 +43,6 @@ function Login() {
     dispatch(actionCreators.login(data, homeNavegation));
   };
 
-  /* 'Ignacio.coluccio@wolox.com.ar' */
-  /* wolox1189*/
   return (
     <ImageBackground source={Background} style={styles.container}>
       <Image style={styles.mainLogoImage} source={mainLogo} />
