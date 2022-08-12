@@ -1,7 +1,10 @@
 import React from 'react';
 import { View, Image, Text, TextInput, Pressable, ImageBackground } from 'react-native';
-import { useForm, Controller } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/native';
+import { useForm, Controller } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { actionCreators } from '@redux/login/actions';
+import { loginInfo } from '@interfaces/loginInfo';
 import Background from '@assets/BackgroundLoginScreen/Background.png';
 import mainLogo from '@assets/mainLogo/mainLogo.png';
 
@@ -33,6 +36,13 @@ function Login() {
 
   const navigation = useNavigation();
   const homeNavegation = () => navigation.navigate('Library');
+
+  const dispatch = useDispatch();
+
+  const onSubmit = (data: loginInfo) => {
+    dispatch(actionCreators.login(data, homeNavegation));
+  };
+
   return (
     <ImageBackground source={Background} style={styles.container}>
       <Image style={styles.mainLogoImage} source={mainLogo} />
@@ -75,6 +85,7 @@ function Login() {
               onChangeText={onChange}
               value={value}
               placeholder="Password"
+              secureTextEntry={true}
             />
           )}
           name="password"
@@ -87,7 +98,7 @@ function Login() {
           false
         )}
       </View>
-      <Pressable style={styles.button} onPress={handleSubmit(homeNavegation)}>
+      <Pressable style={styles.button} onPress={handleSubmit(onSubmit)}>
         <Text style={styles.buttonText}>SIGN IN</Text>
       </Pressable>
     </ImageBackground>

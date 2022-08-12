@@ -6,10 +6,12 @@ import Reactotron from '../../ReactotronConfig';
 
 import book from './book/reducer';
 import commentsBook from './commentsBooks/reducer';
+import login from './login/reducer';
 
 const reducers = combineReducers({
   book,
-  commentsBook
+  commentsBook,
+  login
 });
 
 const middlewares = [applyMiddleware(thunk, fetchMiddleware)];
