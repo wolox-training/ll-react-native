@@ -8,5 +8,4 @@ test('getNumber', () => {
   expect(keepNumbers('test1')).toBe('1');
   expect(keepNumbers('test')).toBe('');
   expect(keepNumbers('1')).toBe('1');
-  expect(keepNumbers('')).toBe('');
 });
