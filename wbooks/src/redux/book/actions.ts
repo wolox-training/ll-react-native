@@ -1,7 +1,7 @@
 import { createTypes, completeTypes } from 'redux-recompose';
 import { getBooks } from '@services/bookService';
 
-export const booksList = 'booksList';
+export const BOOKS_LIST = 'BOOKS_LIST';
 export const actions = createTypes(
   completeTypes({
     primaryActions: ['GET_BOOKS']
@@ -12,7 +12,7 @@ export const actions = createTypes(
 export const actionCreators = {
   getBooks: () => ({
     type: actions.GET_BOOKS,
-    target: booksList,
+    target: BOOKS_LIST,
     service: getBooks
   })
 };

@@ -1,4 +1,4 @@
-import { actionCreators, booksList } from '@redux/book/actions';
+import { actionCreators, BOOKS_LIST } from '@redux/book/actions';
 import { getBooks } from '@services/bookService';
 import configureStore from 'redux-mock-store';
 
@@ -12,6 +12,6 @@ it('should dispatch action', () => {
   store.dispatch(actionCreators.getBooks());
 
   const actions = store.getActions();
-  const expectedAction = { type: '@@BOOK/GET_BOOKS', target: booksList, service: getBooks };
+  const expectedAction = { type: '@@BOOK/GET_BOOKS', target: BOOKS_LIST, service: getBooks };
   expect(actions).toEqual([expectedAction]);
 });
