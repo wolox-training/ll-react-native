@@ -11,6 +11,7 @@ export default {
     '!src/**/constants/*.{js,ts}'
   ],
   coveragePathIgnorePatterns: ['/node_modules/', '/jest'],
+  setupFiles: ['<rootDir>/jest/setup.js'],
   setupFilesAfterEnv: [
     '<rootDir>/setup.js',
     './node_modules/react-native-gesture-handler/jestSetup.js',
