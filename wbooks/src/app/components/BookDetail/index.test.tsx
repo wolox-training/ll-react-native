@@ -1,6 +1,6 @@
 import React from 'react';
 import BookDetail from '@components/BookDetail';
-import { render, screen, waitForElementToBeRemoved } from '@testing-library/react-native';
+import { render, screen } from '@testing-library/react-native';
 
 import { MockedNavigator } from '../../../../__mocks__/Navigation';
 
