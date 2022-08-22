@@ -17,8 +17,6 @@ const BookList = () => {
   };
 
   const books = useSelector((state: State) => state.book.booksList);
-  /* const bookAdded = useSelector((state: State) => state.addBook.bookToAdd); */
-  /* const alldata = [books, bookAdded];  */
 
   return (
     <SafeAreaView>

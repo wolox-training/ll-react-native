@@ -5,7 +5,8 @@ import { actions } from './actions';
 
 const stateDescription = {
   description: {
-    booksList: []
+    booksList: [],
+    bookToAdd: []
   }
 };
 

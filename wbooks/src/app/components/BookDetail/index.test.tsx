@@ -19,7 +19,7 @@ describe('BookDetail', () => {
   });
   test('BookId', () => {
     render(<MockedNavigator component={BookDetail} params={data} />);
-    const element = screen.queryByText('10') ? screen.queryByText('10') : null;
+    const element = screen.queryByText('10');
     expect(element).toBeNull();
   });
 });
