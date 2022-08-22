@@ -15,7 +15,11 @@ const BookList = () => {
       <Book id={item.id} title={item.title} author={item.author} imageUrl={item.imageUrl} year={item.year} />
     );
   };
+
   const books = useSelector((state: State) => state.book.booksList);
+  /* const bookAdded = useSelector((state: State) => state.addBook.bookToAdd); */
+  /* const alldata = [books, bookAdded];  */
+
   return (
     <SafeAreaView>
       <FlatList data={books} renderItem={renderItem} keyExtractor={keyExtractor} />

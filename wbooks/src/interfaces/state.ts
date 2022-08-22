@@ -10,4 +10,5 @@ export interface State {
     commentsListError: null | string;
   };
   login: { loginData: loginInfo; loginDataLoading: boolean; loginDataError: null | string };
+  addBook: { bookToAdd: BookProps[]; bookToAddLoading: boolean; bookToAddError: null | string };
 }
