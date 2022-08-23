@@ -16,7 +16,7 @@ const reducers = combineReducers({
 
 const middlewares = [applyMiddleware(thunk, fetchMiddleware)];
 if (__DEV__) {
-  if (process.env.JEST_WORKER_ID == undefined) {
+  if (process.env.JEST_WORKER_ID === undefined) {
     middlewares.push(Reactotron.createEnhancer());
   }
 }

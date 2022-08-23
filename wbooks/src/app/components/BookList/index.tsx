@@ -15,7 +15,9 @@ const BookList = () => {
       <Book id={item.id} title={item.title} author={item.author} imageUrl={item.imageUrl} year={item.year} />
     );
   };
+
   const books = useSelector((state: State) => state.book.booksList);
+
   return (
     <SafeAreaView>
       <FlatList data={books} renderItem={renderItem} keyExtractor={keyExtractor} />

@@ -3,7 +3,6 @@ import { View, Text, Image, Pressable } from 'react-native';
 import defaultImg from '@assets/defaultBook.png';
 import { useNavigation } from '@react-navigation/native';
 import { BookProps } from '@interfaces/BookProps';
-import { connect } from 'react-redux';
 
 import styles from './styles';
 
@@ -28,4 +27,4 @@ function Book({ title, author, imageUrl, year }: BookProps) {
   );
 }
 
-export default connect()(Book);
+export default Book;
