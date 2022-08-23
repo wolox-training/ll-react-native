@@ -1,15 +1,15 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  searchButton: {
+  searchBackground: {
     position: 'absolute',
-    right: '9%'
+    alignSelf: 'center',
+    marginTop: '22%'
   },
-
-  searchButtonImg: {
+  searchBackgroundImg: {
     position: 'relative',
-    width: 20,
-    height: 20
+    width: 240,
+    height: 135
   }
 });
 

@@ -13,6 +13,7 @@ import BookDetails from './screens/BookDetails';
 import BackButton from './components/BackButton';
 import SearchButton from './components/SearchButton';
 import Login from './screens/Login';
+import SearchScreen from './screens/SearchScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -60,6 +61,14 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
           <Stack.Screen name="Library" component={Library} options={{ headerShown: false }} />
+          <Stack.Screen
+            name="SearchScreen"
+            component={SearchScreen}
+            options={{
+              title: 'SEARCH',
+              ...headerStyles
+            }}
+          />
 
           <Stack.Screen
             name="Details"
