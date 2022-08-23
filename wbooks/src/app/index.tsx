@@ -11,6 +11,7 @@ import { headerStyle, headerTitleStyle } from './styles';
 import Home from './screens/Home';
 import BookDetails from './screens/BookDetails';
 import BackButton from './components/BackButton';
+import SearchButton from './components/SearchButton';
 import Login from './screens/Login';
 
 const Stack = createNativeStackNavigator();
@@ -36,7 +37,8 @@ const Library = () => {
         component={Home}
         options={{
           title: 'HOME',
-          ...headerStyles
+          ...headerStyles,
+          headerRight: () => <SearchButton />
         }}
       />
       <Tab.Screen
