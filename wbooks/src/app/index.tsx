@@ -14,6 +14,7 @@ import BackButton from './components/BackButton';
 import SearchButton from './components/SearchButton';
 import Login from './screens/Login';
 import SearchScreen from './screens/SearchScreen';
+import SearchBar from './components/SearchBar';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -64,10 +65,7 @@ const App = () => {
           <Stack.Screen
             name="SearchScreen"
             component={SearchScreen}
-            options={{
-              title: 'SEARCH',
-              ...headerStyles
-            }}
+            options={{ headerTitle: () => <SearchBar />, ...headerStyles }}
           />
 
           <Stack.Screen

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { Image, TouchableOpacity } from 'react-native';
-import searchIccon from '@assets/searchBar/ic_search.png';
+import searchIccon from '@assets/searchIcon/ic_search.png';
 
 import styles from './styles';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Text } from 'react-native';
+import { View, Image } from 'react-native';
 import searchBackground from '@assets/searchBackground/Search_results_empty.png';
 
 import styles from './styles';
